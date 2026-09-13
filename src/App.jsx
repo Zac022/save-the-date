@@ -35,7 +35,7 @@ export default function App() {
 
   const [showGallery, setShowGallery] = useState(false);
   const [currentPhoto, setCurrentPhoto] = useState(0);
-  const galleryPhotos = ['/photo1.jpeg', '/photo2.jpeg', '/photo3.png', '/photo4.jpeg', '/photo.jpg'];
+  const galleryPhotos = ['/photo1.jpeg', '/photo2.jpeg', '/photo3.png', '/photo4.jpeg', '/photo.jpg', '/photo6.jpeg', '/photo7.jpeg'];
 
   const { scrollYProgress } = useScroll();
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
