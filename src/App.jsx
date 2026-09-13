@@ -114,20 +114,20 @@ export default function App() {
   return (
     <div className="relative bg-[#080808] text-white font-sans overflow-x-hidden selection:bg-[#C5A880] selection:text-black antialiased">
       
-      {/* Background Photo & Enhanced Visible Gold Dust Particle Effect */}
+      {/* Background Photo - Full screen cover with balanced framing */}
       <div className="fixed inset-0 z-0 overflow-hidden bg-black">
         <motion.img 
-          src="/photo1.png" 
+          src="/p1.jpg" 
           alt="Fiston and Nancy" 
-          className="w-full h-full object-cover object-[58%_center] md:object-center grayscale contrast-125"
+          className="w-full h-full object-cover object-[center_40%] grayscale contrast-125"
           animate={{ 
-            filter: isRevealed ? 'blur(0px) contrast(125%) grayscale(100%)' : 'blur(12px) contrast(125%) grayscale(100%)',
-            opacity: isRevealed ? 0.75 : 0.35,
-            scale: isRevealed ? 1 : 1.05 
+            filter: isRevealed ? 'blur(0px) contrast(125%) grayscale(100%)' : 'blur(10px) contrast(125%) grayscale(100%)',
+            opacity: isRevealed ? 0.78 : 0.35,
+            scale: isRevealed ? 1 : 1.03 
           }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
 
         {/* Enhanced Visible Gold Dust Particles */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
@@ -168,7 +168,7 @@ export default function App() {
       <AnimatePresence>
         {!isRevealed && (
           <motion.div 
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center select-none cursor-pointer bg-black/20 backdrop-blur-[2px]"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center select-none cursor-pointer bg-black/30 backdrop-blur-[2px]"
             onPointerDown={handlePressStart}
             onPointerUp={handlePressEnd}
             onPointerLeave={handlePressEnd}
